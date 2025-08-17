@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="stylesheet" href="./src/assets/css/style.css">
+    <link rel="stylesheet" href="./src/assets/css/style.min.css">
+    <link rel="stylesheet" href="./src/assets/css/vendor.css">
+    <link rel="stylesheet" href="./src/assets/css/vendor.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+      <!-- Tiny Slider JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+
+  <!-- Your initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var slider = tns({
+        container: '.tiny-slider-inner',
+        items: 3,
+        slideBy: 'page',
+        autoplay: true,
+        controls: true,
+        nav: false,
+        gutter: 10,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1200: { items: 3 }
+        }
+      });
+    });
+  </script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/vendors.js"></script>
+
+  </body>
+  
+</html>
