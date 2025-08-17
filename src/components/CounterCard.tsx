@@ -45,7 +45,7 @@ export  const CounterCard = () =>  {
               ></h3>
               <span className="h3 text-primary mb-0">+</span>
             </div>
-            <h6 className="fw-normal mb-0">Amazing Services</h6>
+            <h6 className="fw-normal mb-0">Loyal Customers</h6>
           </div>
         </div>
       </div>

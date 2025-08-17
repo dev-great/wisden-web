@@ -36,8 +36,8 @@ export const Home = () => {
                                 </span>
                             </span>
                         </h1>
-                        <p className="mb-3">A secured abode with luxurious apartments stay. Efficiently managed by experienced personnels in hospitality and tourism services.</p>
-                        <a href="#" className="btn btn-lg btn-primary-soft me-2 mb-0">Explore Holidays<i
+                        <p className="mb-3">A secured abode with luxurious apartments. Efficiently managed by experienced personnels in hospitality and tourism services.</p>
+                        <a href="#" className="btn btn-lg btn-primary-soft me-2 mb-0">Download Mobile App<i
                                 className="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div> 
@@ -412,10 +412,7 @@ export const Home = () => {
                     <div className="row mb-4">
                         <div className="col-12 pb-6 text-center">
                             <h2 className="pb-3">We always provide the best for our hotel visitors. We are happy to help you.</h2>
-                            <p className="mb-0">We focus a great deal on the understanding of behavioral psychology and influence
-                                triggers which are crucial for becoming a well-rounded Digital Marketer. We understand that
-                                theory is important to build a solid foundation, we understand that theory alone isn't going to
-                                get the job done.</p>
+                            <p className="mb-0">At Wishden Hotel, we go beyond just offering a place to stay we create experiences that leave lasting memories. From the moment you arrive, our team is dedicated to providing unmatched comfort, attentive service, and a touch of elegance in every detail. Your comfort and happiness are our top priority.</p>
                         </div>
                     </div>
 
