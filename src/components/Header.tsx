@@ -69,7 +69,7 @@ const setTheme = useTheme();
                   Support
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="pagesMenu">
-                  <li><Link className="dropdown-item" to="/newsletter">Newsletter</Link></li>
+                  <li><Link className="dropdown-item" to="#newsletter">Newsletter</Link></li>
                   <li><Link className="dropdown-item" to="/privacy-policy">Privacy Policy</Link></li>
                   <li><Link className="dropdown-item" to="/terms-of-service">Terms of Service</Link></li>
                   <li><Link className="dropdown-item" to="/faq">FAQs</Link></li>

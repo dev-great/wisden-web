@@ -65,7 +65,7 @@ export  const Footer = () =>  {
               <div className="col-6 col-md-3">
                 <h5 className="text-white mb-2 mb-md-4">Global Site</h5>
                 <ul className="nav flex-column text-primary-hover">
-                  <li className="nav-item"><Link className="nav-link text-body-secondary" to="/newsletter">Newsletters</Link></li>
+                  <li className="nav-item"><Link className="nav-link text-body-secondary" to="#newsletter">Newsletters</Link></li>
                   <li className="nav-item"><Link className="nav-link text-body-secondary" to="#">iOS Download</Link></li>
                   <li className="nav-item"><Link className="nav-link text-body-secondary" to="#">Andriod Download</Link></li>
                 </ul>

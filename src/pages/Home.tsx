@@ -761,7 +761,9 @@ export const Home = () => {
                 </div>
             </section>
 
-           <NewsLetters/>
+          <section id="newsletter">
+            <NewsLetters />
+            </section>
 
             <section className="new-light">
                 <div className="container">
