@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { tns } from "tiny-slider/src/tiny-slider";
+import { useEffect, useRef } from "react";
+import { tns, type TinySliderInstance } from "tiny-slider/src/tiny-slider";
 import "tiny-slider/dist/tiny-slider.css";
 import offer1 from "../assets/images/new/hall.jpg";
 import offer2 from "../assets/images/new/garden.jpg";
@@ -14,72 +14,99 @@ interface Offer {
 }
 
 const offers: Offer[] = [
-  { 
-    img: offer1, 
-    title: "Unique Banquet Halls", 
-    subtitle: "Host your special occasions in style", 
-    link: "#" 
+  {
+    img: offer1,
+    title: "Unique Banquet Halls",
+    subtitle: "Host your special occasions in style",
+    link: "#",
   },
-  { 
-    img: offer2, 
-    title: "Private Garden & Lounge", 
-    subtitle: "Relax in an exclusive outdoor retreat", 
-    link: "#" 
+  {
+    img: offer2,
+    title: "Private Garden & Lounge",
+    subtitle: "Relax in an exclusive outdoor retreat",
+    link: "#",
   },
-  { 
-    img: offer3, 
-    title: "Book & Enjoy", 
-    subtitle: "Save 20% on our best available rates", 
-    link: "#" 
+  {
+    img: offer3,
+    title: "Book & Enjoy",
+    subtitle: "Save 20% on our best available rates",
+    link: "#",
   },
-  { 
-    img: offer4, 
-    title: "Exclusive Bar & Restaurant", 
-    subtitle: "Stay 3 nights, get extra perks free", 
-    link: "#" 
+  {
+    img: offer4,
+    title: "Exclusive Bar & Restaurant",
+    subtitle: "Stay 3 nights, get extra perks free",
+    link: "#",
   },
 ];
 
 export const OfferSlider = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderInstance = useRef<TinySliderInstance | null>(null);
+
   useEffect(() => {
-    tns({
-      container: ".tiny-slider-inner",
-      items: 3,
-      slideBy: "page",
-    autoplay: true,
-    controls: false,   // Tiny Slider generates arrows
-    nav: false,
-    autoplayButton: false, // remove the play/pause buttons
-    autoplayButtonOutput: false,
-      gutter: 10,
-      responsive: {
-        0: { items: 1 },
-        768: { items: 2 },
-        1200: { items: 3 },
-      },
-    });
+    // Check if slider container exists and has children
+    if (sliderRef.current && sliderRef.current.children.length > 0) {
+      // Small delay to ensure DOM is fully ready
+      const timer = setTimeout(() => {
+        if (sliderRef.current && !sliderInstance.current) {
+          sliderInstance.current = tns({
+            container: sliderRef.current,
+            items: 3,
+            slideBy: "page",
+            autoplay: true,
+            controls: false,
+            nav: false,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
+            gutter: 16,
+            responsive: {
+              0: { items: 1 },
+              768: { items: 2 },
+              1200: { items: 3 },
+            },
+          });
+        }
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+        if (sliderInstance.current) {
+          sliderInstance.current.destroy();
+          sliderInstance.current = null;
+        }
+      };
+    }
   }, []);
 
   return (
-    <section className="pb-4 pb-lg-6">
-          <div className="container">
-              
-        <div className="tiny-slider arrow-round arrow-blur arrow-hover" dir="ltr">
-          <div className="tiny-slider-inner">
+    <section className="py-8 lg:py-12">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Special Offers</h2>
+          <p className="text-gray-600">Discover our exclusive deals and packages</p>
+        </div>
+
+        {/* Slider */}
+        <div className="offer-slider" dir="ltr">
+          <div ref={sliderRef}>
             {offers.map((offer, i) => (
-              <div key={i}>
-                <div className="card border rounded-3 overflow-hidden">
-                  <div className="row g-0 align-items-center">
-                    <div className="col-sm-6">
-                      <img src={offer.img} className="card-img rounded-0" alt="" />
+              <div key={i} className="px-2">
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex flex-col sm:flex-row">
+                    {/* Image */}
+                    <div className="sm:w-1/2">
+                      <img src={offer.img} alt={offer.title} className="w-full h-48 sm:h-full object-cover" />
                     </div>
-                    <div className="col-sm-6">
-                      <div className="card-body px-3">
-                        <h6 className="card-title">
-                          <a href={offer.link} className="stretched-link">{offer.title}</a>
-                        </h6>
-                        <p className="mb-0">{offer.subtitle}</p>
-                      </div>
+                    {/* Content */}
+                    <div className="sm:w-1/2 p-4 flex flex-col justify-center">
+                      <h6 className="text-lg font-semibold text-gray-900 mb-1">
+                        <a href={offer.link} className="hover:text-amber-500 transition-colors">
+                          {offer.title}
+                        </a>
+                      </h6>
+                      <p className="text-gray-600 text-sm">{offer.subtitle}</p>
                     </div>
                   </div>
                 </div>
@@ -90,4 +117,4 @@ export const OfferSlider = () => {
       </div>
     </section>
   );
-}
+};

@@ -1,1 +1,31 @@
-@import "tiny-slider/dist/tiny-slider.css";
+/* @import "tiny-slider/dist/tiny-slider.css"; */
+
+/* Fix for Bootstrap navbar items hidden by Tailwind */
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+}
+
+.navbar-nav .nav-item {
+  display: list-item !important;
+}
+
+.navbar-nav .nav-link {
+  display: block !important;
+}
+
+.navbar-collapse.collapse:not(.show) {
+  display: none !important;
+}
+
+.navbar-collapse.collapse.show,
+.navbar-collapse.collapsing {
+  display: block !important;
+}
+
+@media (min-width: 1200px) {
+  .navbar-collapse.collapse {
+    display: flex !important;
+  }
+}
