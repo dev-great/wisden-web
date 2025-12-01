@@ -1,5 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, easeInOut, type Variants } from "framer-motion";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { OfferSlider } from "../components/OfferSlider";
@@ -21,35 +22,48 @@ import new15 from "../assets/images/new/home8.jpg";
 import about01 from "../assets/images/new/about.jpg";
 import TawkWidget from "../components/TawkWidget";
 
-// Animation variants
-const fadeInUp = {
+// Fade in from bottom
+export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6 }, // <-- remove 'ease' here
   },
 };
 
-const fadeInLeft = {
+// Fade in from left
+export const fadeInLeft: Variants = {
   hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6 },
   },
 };
 
-const fadeInRight = {
+// Fade in from right
+export const fadeInRight: Variants = {
   hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6 },
   },
 };
 
-const staggerContainer = {
+// Scale in
+export const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
+// Stagger container
+export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -60,22 +74,14 @@ const staggerContainer = {
   },
 };
 
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
-const floatAnimation = {
+// Float animation (looping) — can stay in animate prop
+export const floatAnimation = {
   animate: {
     y: [0, -10, 0],
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   },
 };
@@ -312,7 +318,6 @@ export const Home = () => {
                         </div>
                         <div className="flex-1">
                           <span className="text-gray-800 font-semibold text-sm block">{benefit.label}</span>
-                          <span className="text-gray-400 text-xs">{benefit.description}</span>
                         </div>
                         <ArrowRight size={16} className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </motion.li>
