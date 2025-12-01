@@ -153,7 +153,7 @@ export const Home = () => {
             ></div>
             <motion.div className="max-w-4xl mx-auto text-center" initial="hidden" animate="visible" variants={staggerContainer}>
               {/* Badge */}
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 rounded-full text-indigo-600 text-sm font-medium mb-6">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-indigo-600 text-sm font-medium mb-6">
                 <MapPin size={16} />
                 <span>Premium Hotel in City Center</span>
                 <span className="flex h-2 w-2 relative">
