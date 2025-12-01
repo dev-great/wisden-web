@@ -104,16 +104,16 @@ export const OfferSlider = () => {
       case "20% Off":
         return "bg-gradient-to-r from-rose-500 to-pink-500";
       case "Best Value":
-        return "bg-gradient-to-r from-blue-500 to-indigo-500";
+        return "bg-gradient-to-r from-indigo-500 to-indigo-500";
       default:
         return "bg-gradient-to-r from-gray-500 to-gray-600";
     }
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-blue-50 relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-indigo-50 relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-100 rounded-full blur-3xl opacity-60 translate-y-1/2 -translate-x-1/2"></div>
 
       {/* Subtle pattern overlay */}
@@ -127,12 +127,12 @@ export const OfferSlider = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-blue-600 text-sm font-medium mb-4 shadow-sm" whileHover={{ scale: 1.05 }}>
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-indigo-600 text-sm font-medium mb-4 shadow-sm" whileHover={{ scale: 1.05 }}>
             <Sparkles size={16} className="text-amber-500" />
             <span>Limited Time Offers</span>
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Special Offers & <span className="text-blue-600">Packages</span>
+            Special Offers & <span className="text-indigo-600">Packages</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">Discover our exclusive deals and make your stay even more memorable</p>
         </motion.div>
@@ -157,11 +157,11 @@ export const OfferSlider = () => {
 
                     {/* Content - Right Side */}
                     <div className="sm:w-1/2 p-5 flex flex-col justify-center">
-                      <h6 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h6 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
                         <a href={offer.link}>{offer.title}</a>
                       </h6>
                       <p className="text-gray-500 text-sm mb-4 leading-relaxed">{offer.subtitle}</p>
-                      <a href={offer.link} className="inline-flex items-center text-blue-600 font-semibold text-sm group/link w-fit">
+                      <a href={offer.link} className="inline-flex items-center text-indigo-600 font-semibold text-sm group/link w-fit">
                         Learn More
                         <ArrowRight size={16} className="ml-1 transition-transform group-hover/link:translate-x-1" />
                       </a>
@@ -175,7 +175,7 @@ export const OfferSlider = () => {
 
         {/* View All Button */}
         <motion.div className="text-center mt-10" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-          <motion.a href="#" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 border-2 border-blue-600" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <motion.a href="#" className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 border-2 border-indigo-600" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             View All Offers
             <ArrowRight size={18} className="ml-2" />
           </motion.a>

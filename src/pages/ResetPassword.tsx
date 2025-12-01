@@ -102,8 +102,8 @@ const ResetPassword = () => {
                   <>
                     {/* Header */}
                     <div className="mb-8 text-center animate-slide-down" style={{ animationDelay: "0.1s" }}>
-                      <div className="mb-4 mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-gentle">
-                        <Lock className="w-8 h-8 text-blue-600" />
+                      <div className="mb-4 mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-gentle">
+                        <Lock className="w-8 h-8 text-indigo-600" />
                       </div>
 
                       <h2 className="text-2xl font-bold text-gray-900 mb-2">Reset Password</h2>
@@ -119,7 +119,7 @@ const ResetPassword = () => {
                           New Password
                         </label>
                         <div className="relative">
-                          <input type={showPassword ? "text" : "password"} id="password" name="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter new password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" />
+                          <input type={showPassword ? "text" : "password"} id="password" name="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter new password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300" />
                           <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors duration-300">
                             {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                           </button>
@@ -154,7 +154,7 @@ const ResetPassword = () => {
                           Confirm New Password
                         </label>
                         <div className="relative">
-                          <input type={showConfirmPassword ? "text" : "password"} id="confirmPassword" name="confirmPassword" value={formik.values.confirmPassword} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Confirm new password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" />
+                          <input type={showConfirmPassword ? "text" : "password"} id="confirmPassword" name="confirmPassword" value={formik.values.confirmPassword} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Confirm new password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300" />
                           <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors duration-300">
                             {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                           </button>
@@ -186,14 +186,14 @@ const ResetPassword = () => {
                       </div>
 
                       {/* Submit Button */}
-                      <button type="submit" disabled={formik.isSubmitting} className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                      <button type="submit" disabled={formik.isSubmitting} className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.4s" }}>
                         {formik.isSubmitting ? "Resetting..." : "Reset Password"}
                       </button>
                     </form>
 
                     {/* Back to Login */}
                     <div className="mt-6 text-center animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                      <Link to="/login" className="text-sm text-gray-600 hover:text-blue-600 font-medium transition-all duration-300 transform hover:scale-105 inline-block">
+                      <Link to="/login" className="text-sm text-gray-600 hover:text-indigo-600 font-medium transition-all duration-300 transform hover:scale-105 inline-block">
                         ← Back to Login
                       </Link>
                     </div>
@@ -212,7 +212,7 @@ const ResetPassword = () => {
                         Your password has been reset. You can now login with your new password.
                       </p>
 
-                      <Link to="/login" className="inline-block w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                      <Link to="/login" className="inline-block w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.2s" }}>
                         Go to Login
                       </Link>
 
@@ -224,8 +224,8 @@ const ResetPassword = () => {
 
               {/* Security Note */}
               {!isSuccess && (
-                <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-                  <p className="text-sm text-blue-800">
+                <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4 animate-slide-up" style={{ animationDelay: "0.6s" }}>
+                  <p className="text-sm text-indigo-800">
                     <span className="font-semibold">Security Tip:</span> Choose a strong password that you don't use for other accounts.
                   </p>
                 </div>

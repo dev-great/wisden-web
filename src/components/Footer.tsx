@@ -171,7 +171,7 @@ export const Footer = () => {
             <h5 className="text-white font-semibold mb-2">Follow us on</h5>
             <ul className="flex flex-wrap gap-2 mt-3 sm:justify-end">
               <li>
-                <a className="inline-flex items-center justify-center w-9 h-9 rounded bg-blue-600 hover:bg-blue-700 transition-colors text-white text-sm" href="#">
+                <a className="inline-flex items-center justify-center w-9 h-9 rounded bg-indigo-600 hover:bg-indigo-700 transition-colors text-white text-sm" href="#">
                   <i className="fab fa-fw fa-facebook-f"></i>
                 </a>
               </li>
@@ -186,7 +186,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a className="inline-flex items-center justify-center w-9 h-9 rounded bg-blue-700 hover:bg-blue-800 transition-colors text-white text-sm" href="#">
+                <a className="inline-flex items-center justify-center w-9 h-9 rounded bg-indigo-700 hover:bg-indigo-800 transition-colors text-white text-sm" href="#">
                   <i className="fab fa-fw fa-linkedin-in"></i>
                 </a>
               </li>

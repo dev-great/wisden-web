@@ -125,14 +125,14 @@ const VerifyEmail = () => {
       <Header />
       <TawkWidget />
       <main className="flex-1">
-        <div className="flex flex-col bg-blue-100 text-foreground overflow-x-hidden">
+        <div className="flex flex-col bg-indigo-100 text-foreground overflow-x-hidden">
           <main className="flex-grow flex items-center justify-center py-12 px-4">
             <div className="w-full max-w-md animate-fade-in">
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 {/* Header */}
                 <div className="mb-8 text-center animate-slide-down" style={{ animationDelay: "0.1s" }}>
-                  <div className="mb-4 mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-gentle">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 mx-auto w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-gentle">
+                    <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -161,7 +161,7 @@ const VerifyEmail = () => {
                         onChange={(e) => handleChange(index, e.target.value)}
                         onKeyDown={(e) => handleKeyDown(index, e)}
                         onPaste={index === 0 ? handlePaste : undefined}
-                        className="w-12 h-12 text-center text-lg font-semibold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 transform hover:scale-105 animate-scale-in"
+                        className="w-12 h-12 text-center text-lg font-semibold border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 transform hover:scale-105 animate-scale-in"
                         style={{
                           animationDelay: `${index * 0.05}s`,
                         }}
@@ -172,7 +172,7 @@ const VerifyEmail = () => {
                 </div>
 
                 {/* Verify Button */}
-                <button onClick={handleVerify} disabled={isVerifying || otp.join("").length !== 6} className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <button onClick={handleVerify} disabled={isVerifying || otp.join("").length !== 6} className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
                   {isVerifying ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
@@ -189,10 +189,10 @@ const VerifyEmail = () => {
 
                   {countdown > 0 ? (
                     <p className="text-sm text-gray-500">
-                      Resend code in <span className="font-semibold text-blue-600 animate-pulse">{countdown}s</span>
+                      Resend code in <span className="font-semibold text-indigo-600 animate-pulse">{countdown}s</span>
                     </p>
                   ) : (
-                    <button onClick={handleResendCode} disabled={isResending} className="text-sm text-blue-600 font-semibold hover:underline disabled:opacity-50 transition-all duration-300 transform hover:scale-105">
+                    <button onClick={handleResendCode} disabled={isResending} className="text-sm text-indigo-600 font-semibold hover:underline disabled:opacity-50 transition-all duration-300 transform hover:scale-105">
                       {isResending ? "Sending..." : "Resend Code"}
                     </button>
                   )}
@@ -200,15 +200,15 @@ const VerifyEmail = () => {
 
                 {/* Back to Login */}
                 <div className="mt-8 text-center pt-6 border-t border-gray-200 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                  <Link to="/login" className="text-sm text-gray-600 hover:text-blue-600 font-medium transition-all duration-300 transform hover:scale-105 inline-block">
+                  <Link to="/login" className="text-sm text-gray-600 hover:text-indigo-600 font-medium transition-all duration-300 transform hover:scale-105 inline-block">
                     ← Back to Login
                   </Link>
                 </div>
               </div>
 
               {/* Help Text */}
-              <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-                <p className="text-sm text-blue-800">
+              <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4 animate-slide-up" style={{ animationDelay: "0.6s" }}>
+                <p className="text-sm text-indigo-800">
                   <span className="font-semibold">Note:</span> The verification code will expire in 10 minutes. Check your spam folder if you don't see the email.
                 </p>
               </div>

@@ -45,7 +45,7 @@ export const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Call Us Card */}
                 <div className="bg-white rounded-lg shadow-md p-4 text-center flex flex-col items-center h-full border border-gray-100">
-                  <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mb-3">
+                  <div className="w-12 h-12 bg-indigo-100 text-indigo-500 rounded-full flex items-center justify-center mb-3">
                     <Headset size={22} />
                   </div>
                   <h5 className="text-lg font-semibold text-gray-900 mb-1">Call us</h5>
@@ -84,7 +84,7 @@ export const Contact = () => {
                   <p className="text-gray-600 text-sm mb-3 relative z-10">Follow us for updates.</p>
                   <ul className="flex items-center gap-2 mt-auto relative z-10">
                     <li>
-                      <a href="#" className="w-8 h-8 flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white transition-colors">
+                      <a href="#" className="w-8 h-8 flex items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-700 text-white transition-colors">
                         <Facebook size={14} />
                       </a>
                     </li>
@@ -99,7 +99,7 @@ export const Contact = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="w-8 h-8 flex items-center justify-center rounded-md bg-blue-700 hover:bg-blue-800 text-white transition-colors">
+                      <a href="#" className="w-8 h-8 flex items-center justify-center rounded-md bg-indigo-700 hover:bg-indigo-800 text-white transition-colors">
                         <Linkedin size={14} />
                       </a>
                     </li>

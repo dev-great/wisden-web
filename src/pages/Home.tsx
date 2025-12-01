@@ -89,7 +89,7 @@ export const floatAnimation = {
 export const Home = () => {
   const benefits = [
     { icon: DollarSign, label: "Best Rate Guaranteed", color: "text-emerald-500", bg: "bg-emerald-50" },
-    { icon: CreditCard, label: "Online Payment", color: "text-blue-500", bg: "bg-blue-50" },
+    { icon: CreditCard, label: "Online Payment", color: "text-indigo-500", bg: "bg-indigo-50" },
     { icon: Award, label: "Exclusive Members Rewards", color: "text-amber-500", bg: "bg-amber-50" },
     { icon: Wifi, label: "WIFI Access", color: "text-purple-500", bg: "bg-purple-50" },
     { icon: Tag, label: "No Hidden Changes", color: "text-rose-500", bg: "bg-rose-50" },
@@ -121,8 +121,8 @@ export const Home = () => {
       icon: UserCheck,
       title: "Trained Security",
       description: "Wishden Hotel has a good number of security personnel safeguarding the gates and always on ground.",
-      color: "from-blue-400 to-blue-600",
-      iconBg: "bg-blue-500",
+      color: "from-indigo-400 to-indigo-600",
+      iconBg: "bg-indigo-500",
     },
   ];
 
@@ -139,27 +139,33 @@ export const Home = () => {
       <TawkWidget />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative pt-8 sm:pt-12 pb-16 overflow-hidden">
+        <section className="relative pt-8 bg-indigo-50 sm:pt-12 pb-16 overflow-hidden">
           {/* Background decorations */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-100 rounded-full blur-3xl opacity-40 -z-10"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-40 -z-10"></div>
 
           <div className="container mx-auto px-4 pb-12">
+            <div
+              className="absolute inset-0  opacity-[0.03]"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233B82F6' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}
+            ></div>
             <motion.div className="max-w-4xl mx-auto text-center" initial="hidden" animate="visible" variants={staggerContainer}>
               {/* Badge */}
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full text-blue-600 text-sm font-medium mb-6">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 rounded-full text-indigo-600 text-sm font-medium mb-6">
                 <MapPin size={16} />
                 <span>Premium Hotel in City Center</span>
                 <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
                 </span>
               </motion.div>
 
               <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Discover Comfort &{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Elegance</span>
+                  <span className="relative z-10 bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">Elegance</span>
                   <motion.svg className="absolute -bottom-2 left-0 w-full -z-10" viewBox="0 0 200 12" preserveAspectRatio="none" initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }} transition={{ duration: 1, delay: 0.5 }}>
                     <motion.path d="M0,6 Q50,0 100,6 T200,6" fill="none" stroke="url(#gradient)" strokeWidth="4" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1, delay: 0.5 }} />
                     <defs>
@@ -179,13 +185,13 @@ export const Home = () => {
               </motion.p>
 
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/rooms" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1">
+                <Link to="/rooms" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1">
                   Book Your Stay
                   <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="inline-flex items-center px-6 py-4 text-gray-700 font-medium rounded-xl hover:bg-gray-100 transition-colors">
                   <div className="w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center mr-3 group">
-                    <Play size={18} className="text-blue-600 ml-1" />
+                    <Play size={18} className="text-indigo-600 ml-1" />
                   </div>
                   Watch Video
                 </button>
@@ -207,7 +213,7 @@ export const Home = () => {
           </div>
 
           {/* Image Gallery */}
-          <motion.div className="container mx-auto px-4 overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
+          <motion.div className="container mx-auto px-4 " initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {/* Left Column */}
               <motion.div variants={fadeInLeft} className="hidden sm:grid grid-cols-2 gap-4">
@@ -229,10 +235,10 @@ export const Home = () => {
                     <div>
                       <p className="text-sm text-gray-500">Starting from</p>
                       <p className="text-2xl font-bold text-gray-900">
-                        $99<span className="text-sm font-normal text-gray-500">/night</span>
+                        ₦13,000<span className="text-sm font-normal text-gray-500">/day</span>
                       </p>
                     </div>
-                    <Link to="/rooms" className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                    <Link to="/rooms" className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors">
                       View Rooms
                     </Link>
                   </div>
@@ -255,20 +261,20 @@ export const Home = () => {
         </section>
         <section className="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
           {/* Background decorations */}
-          <div className="absolute top-20 left-0 w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-70"></div>
+          <div className="absolute top-20 left-0 w-72 h-72 bg-indigo-50 rounded-full blur-3xl opacity-70"></div>
           <div className="absolute bottom-20 right-0 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50"></div>
 
           <div className="container mx-auto px-4 relative z-10">
             {/* Section Header */}
             <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <motion.span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4" whileHover={{ scale: 1.05 }}>
+              <motion.span className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-600 text-sm font-semibold rounded-full mb-4" whileHover={{ scale: 1.05 }}>
                 <CheckCircle2 size={16} />
                 Our Services
               </motion.span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 We Always Provide the
                 <br />
-                <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Best For Our Guests</span>
+                <span className="bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">Best For Our Guests</span>
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">At Wishden Hotel, we go beyond just offering a place to stay — we create experiences that leave lasting memories.</p>
             </motion.div>
@@ -296,7 +302,7 @@ export const Home = () => {
                     <p className="text-white text-2xl font-bold mb-4">
                       Save up to <span className="text-amber-400">30%</span> Today
                     </p>
-                    <Link to="/rooms" className="inline-flex items-center justify-center w-full px-6 py-3.5 bg-white text-gray-900 font-semibold rounded-xl hover:bg-blue-50 transition-all group/btn">
+                    <Link to="/rooms" className="inline-flex items-center justify-center w-full px-6 py-3.5 bg-white text-gray-900 font-semibold rounded-xl hover:bg-indigo-50 transition-all group/btn">
                       <Bookmark size={18} className="mr-2" />
                       Book Now
                       <ArrowRight size={16} className="ml-2 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all" />
@@ -308,7 +314,7 @@ export const Home = () => {
                 <motion.div variants={scaleIn} className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 hover:shadow-2xl transition-shadow">
                   <div className="flex items-center justify-between mb-5">
                     <h3 className="text-lg font-bold text-gray-900">Why Choose Us</h3>
-                    <span className="text-xs text-blue-600 font-medium bg-blue-50 px-2 py-1 rounded-full">5 Reasons</span>
+                    <span className="text-xs text-indigo-600 font-medium bg-indigo-50 px-2 py-1 rounded-full">5 Reasons</span>
                   </div>
                   <ul className="space-y-3">
                     {benefits.map((benefit, index) => (
@@ -341,7 +347,7 @@ export const Home = () => {
                   <motion.img src={about01} alt="About Wishden Hotels" className="w-full h-80 lg:h-[500px] object-cover rounded-2xl shadow-2xl" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }} />
 
                   {/* Experience badge */}
-                  <motion.div className="absolute -right-6 -bottom-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-2xl shadow-xl" {...floatAnimation}>
+                  <motion.div className="absolute -right-6 -bottom-6 bg-gradient-to-br from-indigo-600 to-indigo-700 text-white p-6 rounded-2xl shadow-xl" {...floatAnimation}>
                     <p className="text-4xl font-bold">15+</p>
                     <p className="text-sm opacity-90">
                       Years of
@@ -352,7 +358,7 @@ export const Home = () => {
                 </div>
 
                 {/* Background decoration */}
-                <div className="absolute -top-6 -left-6 w-full h-full bg-blue-100 rounded-2xl -z-10"></div>
+                <div className="absolute -top-6 -left-6 w-full h-full bg-indigo-100 rounded-2xl -z-10"></div>
               </motion.div>
 
               {/* Content */}
@@ -361,7 +367,7 @@ export const Home = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   The Best Holidays
                   <br />
-                  <span className="text-blue-600">Start Here!</span>
+                  <span className="text-indigo-600">Start Here!</span>
                 </h2>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">At Wishden Hotels, we blend world-class hospitality with modern comfort, ensuring every guest feels at home. From fine dining and secure facilities to elegant spaces designed for relaxation.</p>
 
@@ -387,47 +393,47 @@ export const Home = () => {
         </section>
 
         {/* Help & Download Section */}
-        <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
+        <section className="py-16 bg-white text-white relative overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
               {/* 24x7 Help */}
-              <motion.div variants={fadeInUp} className="flex items-start p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors" whileHover={{ y: -5 }}>
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+              <motion.div variants={fadeInUp} className="flex items-start p-6 rounded-xl bg-slate-100 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors" whileHover={{ y: -5 }}>
+                <div className="w-18 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                   <Heart size={24} className="text-white" />
                 </div>
                 <div>
-                  <h5 className="text-xl font-semibold mb-2">24x7 Help</h5>
-                  <p className="text-gray-400">If we fall short of your expectation in any way, let us know</p>
+                  <h5 className="text-xl text-black font-semibold mb-2">24x7 Help</h5>
+                  <p className="text-black">If we fall short of your expectation in any way, let us know</p>
                 </div>
               </motion.div>
 
               {/* Payment Trust */}
-              <motion.div variants={fadeInUp} className="flex items-start p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors" whileHover={{ y: -5 }}>
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+              <motion.div variants={fadeInUp} className="flex items-start p-6 rounded-xl bg-slate-100 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors" whileHover={{ y: -5 }}>
+                <div className="w-18 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                   <HandCoins size={24} className="text-white" />
                 </div>
                 <div>
-                  <h5 className="text-xl font-semibold mb-2">Payment Trust</h5>
-                  <p className="text-gray-400">All refunds come with no questions asked guarantee</p>
+                  <h5 className="text-xl text-black font-semibold mb-2">Payment Trust</h5>
+                  <p className="text-black">All refunds come with no questions asked guarantee</p>
                 </div>
               </motion.div>
 
               {/* Download App */}
-              <motion.div variants={fadeInUp} className="md:col-span-2 xl:col-span-1 p-6 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700" whileHover={{ scale: 1.02 }}>
+              <motion.div variants={fadeInUp} className="md:col-span-2 xl:col-span-1 p-6 rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-700" whileHover={{ scale: 1.02 }}>
                 <h5 className="text-xl font-semibold mb-2">Download Our App</h5>
-                <p className="text-blue-100 text-sm mb-4">Get exclusive deals and manage your bookings on the go</p>
+                <p className="text-indigo-100 text-sm mb-4">Get exclusive deals and manage your bookings on the go</p>
                 <div className="flex gap-4">
                   <motion.a href="#" className="block hover:opacity-90 transition-opacity" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <img src={googlePlay} alt="Google Play" className="h-12" />
+                    <img src={googlePlay} alt="Google Play" className="h-10" />
                   </motion.a>
                   <motion.a href="#" className="block hover:opacity-90 transition-opacity" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <img src={appStore} alt="App Store" className="h-12" />
+                    <img src={appStore} alt="App Store" className="h-10" />
                   </motion.a>
                 </div>
               </motion.div>

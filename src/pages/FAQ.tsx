@@ -62,8 +62,8 @@ export const FAQ = () => {
 
               {/* Search */}
               <div className="relative max-w-xl mx-auto">
-                <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full px-5 py-3 pr-12 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors" placeholder="Type search words" />
-                <button type="button" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-500 transition-colors">
+                <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full px-5 py-3 pr-12 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors" placeholder="Type search words" />
+                <button type="button" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-500 transition-colors">
                   <Search size={20} />
                 </button>
               </div>
@@ -78,7 +78,7 @@ export const FAQ = () => {
               <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                 {/* Card Header */}
                 <div className="bg-gray-50 border-b border-gray-200 px-6 py-4">
-                  <h5 className="text-blue-600 font-semibold">FAQs</h5>
+                  <h5 className="text-indigo-600 font-semibold">FAQs</h5>
                 </div>
 
                 {/* Card Body */}

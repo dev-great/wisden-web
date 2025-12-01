@@ -18,7 +18,7 @@ export const Error = (): JSX.Element => {
               <img src={ErrorImg} alt="Error 404" className="h-48 md:h-64 lg:h-80 mx-auto mb-6" />
 
               {/* 404 Text */}
-              <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-blue-500 mb-2">404</h1>
+              <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-indigo-500 mb-2">404</h1>
 
               {/* Error Message */}
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Oh no, something went wrong!</h2>

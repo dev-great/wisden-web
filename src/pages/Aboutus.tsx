@@ -34,7 +34,7 @@ export const AboutUs = () => {
       icon: Zap,
       title: "Power Sources",
       description: "The hotel has multiple options of power supply such as Solar, Generators and Public power supply (JED PLC). This enables the hotel with constant power supply for the comfort of our guests.",
-      color: "bg-blue-100 text-blue-500",
+      color: "bg-indigo-100 text-indigo-500",
     },
     {
       icon: Shield,
@@ -46,7 +46,7 @@ export const AboutUs = () => {
       icon: DoorOpen,
       title: "Conference Facilities",
       description: "Located within the hotel also is our conference hall with ultra-modern video and audio-visual equipment with varying capacities ranging from 50-100 sitting capacity. We organize/host conferences, seminars, training.",
-      color: "bg-blue-100 text-blue-500",
+      color: "bg-indigo-100 text-indigo-500",
     },
     {
       icon: Building,
@@ -72,7 +72,7 @@ export const AboutUs = () => {
               <div className="flex flex-wrap justify-center gap-3">
                 {stats.map((stat, index) => (
                   <div key={index} className="inline-flex items-center bg-white shadow-md rounded-lg py-2 px-4">
-                    <stat.icon size={20} className="text-blue-500 mr-2" />
+                    <stat.icon size={20} className="text-indigo-500 mr-2" />
                     <span className="text-gray-700 font-medium text-sm">{stat.label}</span>
                   </div>
                 ))}
@@ -97,13 +97,13 @@ export const AboutUs = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Our Commitment to <span className="text-blue-500">Excellence.</span>
+                  Our Commitment to <span className="text-indigo-500">Excellence.</span>
                 </h2>
                 <p className="text-gray-600 mb-6">
                   The hotel is situated in the heart of Gboko Town and an hour drive from Benue state capital Makurdi. It is located in the Government Reserved area of Gboko along access road and close to the Area Command of the Nigeria Police Force. It is built on multiple plots of land consisting of serene environment with lush green gardens making it a choice hotel conducive for both local guest, international guest and non-governmental organizations for conferences and workshops.
                 </p>
 
-                <Link to="/rooms" className="inline-flex items-center px-5 py-2.5 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200 transition-colors mb-6">
+                <Link to="/rooms" className="inline-flex items-center px-5 py-2.5 bg-indigo-100 text-indigo-700 font-medium rounded-lg hover:bg-indigo-200 transition-colors mb-6">
                   Book Now
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
@@ -148,7 +148,7 @@ export const AboutUs = () => {
         {/* CTA Section */}
         <section className="py-10 lg:py-16">
           <div className="container mx-auto px-4">
-            <div className="bg-blue-100 rounded-2xl p-6 sm:p-10">
+            <div className="bg-indigo-100 rounded-2xl p-6 sm:p-10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
                 <div className="flex-1">
                   <div className="flex items-center mb-3">

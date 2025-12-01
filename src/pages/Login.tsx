@@ -62,7 +62,7 @@ const Login = () => {
       <Header />
       <TawkWidget />
       <main className="flex-1">
-        <div className="bg-blue-100 bg-opacity-50 flex items-center justify-center pt-10 pb-10 z-50 animate-fade-in">
+        <div className="bg-indigo-100 bg-opacity-50 flex items-center justify-center pt-10 pb-10 z-50 animate-fade-in">
           <div className="bg-white rounded-3xl shadow-2xl max-w-5xl w-full flex">
             {/* Left Side - Travel Image */}
             <div className="hidden md:block w-2/5 bg-gray-800 relative overflow-hidden animate-slide-left" style={{ animationDelay: "0.1s" }}>
@@ -84,7 +84,7 @@ const Login = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
-                  <input type="email" id="email" name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter Email Address" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" />
+                  <input type="email" id="email" name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter Email Address" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300" />
                   {formik.touched.email && formik.errors.email && <p className="text-red-500 text-sm mt-1 animate-fade-in">{formik.errors.email}</p>}
                 </div>
 
@@ -94,7 +94,7 @@ const Login = () => {
                     Password
                   </label>
                   <div className="relative">
-                    <input type={showPassword ? "text" : "password"} id="password" name="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter Password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" />
+                    <input type={showPassword ? "text" : "password"} id="password" name="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter Password" className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-300" />
                     <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-all duration-300 transform hover:scale-110" aria-label="Toggle password visibility">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
@@ -110,14 +110,14 @@ const Login = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button type="submit" disabled={formik.isSubmitting} className="w-full bg-blue-600 text-white py-3.5 !rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 mt-6 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.7s" }}>
+                <button type="submit" disabled={formik.isSubmitting} className="w-full bg-indigo-600 text-white py-3.5 !rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 mt-6 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-fade-in" style={{ animationDelay: "0.7s" }}>
                   {formik.isSubmitting ? "Logging in..." : "Continue"}
                 </button>
               </form>
 
               <p className="mt-6 text-center text-base text-gray-600 animate-fade-in" style={{ animationDelay: "0.8s" }}>
                 Don't have an account?{" "}
-                <Link to="/register" className="text-blue-600 font-medium hover:underline transition-all duration-300 transform hover:scale-105 inline-block">
+                <Link to="/register" className="text-indigo-600 font-medium hover:underline transition-all duration-300 transform hover:scale-105 inline-block">
                   Register
                 </Link>
               </p>
@@ -125,15 +125,15 @@ const Login = () => {
               {/* Terms */}
               <p className="text-base text-gray-500 text-center !mt-6 animate-fade-in" style={{ animationDelay: "0.9s" }}>
                 By proceeding, you agree to Wishden Hotels{" "}
-                <a href="#" className="text-blue-600 hover:underline transition-colors duration-300">
+                <a href="#" className="text-indigo-600 hover:underline transition-colors duration-300">
                   Privacy Policy
                 </a>
                 ,{" "}
-                <a href="#" className="text-blue-600 hover:underline transition-colors duration-300">
+                <a href="#" className="text-indigo-600 hover:underline transition-colors duration-300">
                   User Agreement
                 </a>{" "}
                 and{" "}
-                <a href="#" className="text-blue-600 hover:underline transition-colors duration-300">
+                <a href="#" className="text-indigo-600 hover:underline transition-colors duration-300">
                   T&Cs
                 </a>
               </p>

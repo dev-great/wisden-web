@@ -13,7 +13,7 @@ export const PrivacyPolicy = () => {
           <div className="container mx-auto px-4">
             {/* Header */}
             <div className="text-center mb-8">
-              <h6 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Agreement</h6>
+              <h6 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide mb-2">Agreement</h6>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Privacy Policy</h1>
             </div>
 
@@ -55,7 +55,7 @@ export const PrivacyPolicy = () => {
 
                   <li className="text-gray-700">
                     <strong className="text-gray-900">Contact:</strong> For privacy-related inquiries, please contact us at{" "}
-                    <a href="mailto:wishdenhotels@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium">
+                    <a href="mailto:wishdenhotels@gmail.com" className="text-indigo-600 hover:text-indigo-700 font-medium">
                       wishdenhotels@gmail.com
                     </a>{" "}
                     or <span className="font-medium text-gray-900">07019151382 / 09132286117</span>.
@@ -63,7 +63,7 @@ export const PrivacyPolicy = () => {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-gray-200">
-                  <Link to="/" className="inline-flex items-center px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">
+                  <Link to="/" className="inline-flex items-center px-6 py-3 bg-indigo-500 text-white font-medium rounded-lg hover:bg-indigo-600 transition-colors">
                     I agree with the terms
                   </Link>
                 </div>

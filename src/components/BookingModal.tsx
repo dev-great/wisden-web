@@ -316,13 +316,13 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
         {step === "booking" && (
           <div className="p-6 space-y-6">
             {/* Room Info Card */}
-            <div className="flex gap-4 p-4 bg-blue-50 rounded-xl">
+            <div className="flex gap-4 p-4 bg-indigo-50 rounded-xl">
               <img src={room.images[0]?.image} alt={room.room_type.name} className="w-24 h-24 rounded-lg object-cover" />
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">{room.room_type.name}</h3>
                 <p className="text-sm text-gray-600 mt-1">Room {room.room_number}</p>
                 <div className="flex items-baseline gap-2 mt-2">
-                  <span className="text-lg font-bold text-blue-600">{formatPrice(parseFloat(room.room_type.price_per_night))}</span>
+                  <span className="text-lg font-bold text-indigo-600">{formatPrice(parseFloat(room.room_type.price_per_night))}</span>
                   <span className="text-sm text-gray-500">per night</span>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               <label className="block text-sm font-medium text-gray-700 mb-2">Check-in Date</label>
               <div className="relative">
                 <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                <input type="date" value={checkInDate} onChange={handleCheckInChange} min={getTodayDate()} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                <input type="date" value={checkInDate} onChange={handleCheckInChange} min={getTodayDate()} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
               </div>
             </div>
 
@@ -342,7 +342,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               <label className="block text-sm font-medium text-gray-700 mb-2">Check-out Date</label>
               <div className="relative">
                 <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                <input type="date" value={checkOutDate} onChange={(e) => setCheckOutDate(e.target.value)} min={getMinCheckOutDate()} disabled={!checkInDate} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed" />
+                <input type="date" value={checkOutDate} onChange={(e) => setCheckOutDate(e.target.value)} min={getMinCheckOutDate()} disabled={!checkInDate} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed" />
               </div>
             </div>
 
@@ -351,7 +351,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               <label className="block text-sm font-medium text-gray-700 mb-2">Number of Guests</label>
               <div className="relative">
                 <Users className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                <select value={guests} onChange={(e) => setGuests(e.target.value)} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white">
+                <select value={guests} onChange={(e) => setGuests(e.target.value)} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-white">
                   {Array.from({ length: room.room_type.capacity }, (_, i) => i + 1).map((num) => (
                     <option key={num} value={num}>
                       {num} {num === 1 ? "Guest" : "Guests"}
@@ -366,7 +366,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               <label className="block text-sm font-medium text-gray-700 mb-2">Special Requests (Optional)</label>
               <div className="relative">
                 <MessageSquare className="absolute left-3 top-3 text-gray-400" size={18} />
-                <textarea value={specialRequests} onChange={(e) => setSpecialRequests(e.target.value)} placeholder="Any special requirements..." rows={3} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none" />
+                <textarea value={specialRequests} onChange={(e) => setSpecialRequests(e.target.value)} placeholder="Any special requirements..." rows={3} className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none" />
               </div>
             </div>
 
@@ -378,28 +378,28 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               </div>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" checked={isForSomeoneElse} onChange={(e) => setIsForSomeoneElse(e.target.checked)} className="sr-only peer" />
-                <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
               </label>
             </div>
 
             {/* Guest Details (if booking for someone else) */}
             {isForSomeoneElse && (
-              <div className="space-y-4 p-4 bg-blue-50 rounded-lg">
+              <div className="space-y-4 p-4 bg-indigo-50 rounded-lg">
                 <h4 className="font-medium text-gray-900">Guest Details</h4>
 
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                  <input type="text" value={guestName} onChange={(e) => setGuestName(e.target.value)} placeholder="Full Name" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                  <input type="text" value={guestName} onChange={(e) => setGuestName(e.target.value)} placeholder="Full Name" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
                 </div>
 
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                  <input type="email" value={guestEmail} onChange={(e) => setGuestEmail(e.target.value)} placeholder="Email Address" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                  <input type="email" value={guestEmail} onChange={(e) => setGuestEmail(e.target.value)} placeholder="Email Address" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
                 </div>
 
                 <div className="relative">
                   <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                  <input type="tel" value={guestPhone} onChange={(e) => setGuestPhone(e.target.value)} placeholder="Phone Number" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                  <input type="tel" value={guestPhone} onChange={(e) => setGuestPhone(e.target.value)} placeholder="Phone Number" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
                 </div>
               </div>
             )}
@@ -415,13 +415,13 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
                 </div>
                 <div className="flex justify-between items-center text-lg font-bold">
                   <span>Total:</span>
-                  <span className="text-blue-600">{formatPrice(totalAmount)}</span>
+                  <span className="text-indigo-600">{formatPrice(totalAmount)}</span>
                 </div>
               </div>
             )}
 
             {/* Confirm Button */}
-            <button onClick={handleCreateBooking} disabled={loading || !checkInDate || !checkOutDate} className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2">
+            <button onClick={handleCreateBooking} disabled={loading || !checkInDate || !checkOutDate} className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2">
               {loading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /> : "Confirm & Proceed to Payment"}
             </button>
           </div>
@@ -430,7 +430,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
         {/* Payment Step */}
         {step === "payment" && (
           <div className="p-6 space-y-6">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
               <p className="text-sm text-gray-700 leading-relaxed">Your booking has been successfully created. To proceed, make payment to the account details below. Once payment is made, upload your payment receipt using the button below.</p>
             </div>
 
@@ -451,7 +451,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
                 <div className="flex items-center gap-2">
                   <span className="font-semibold">1012487195</span>
                   <button onClick={() => copyToClipboard("1012487195", "Account number")} className="p-1 hover:bg-gray-200 rounded transition-colors">
-                    <Copy size={16} className="text-blue-600" />
+                    <Copy size={16} className="text-indigo-600" />
                   </button>
                 </div>
               </div>
@@ -459,9 +459,9 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
               <div className="flex justify-between items-center">
                 <span className="text-gray-600">Amount:</span>
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-lg text-blue-600">{formatPrice(totalAmount)}</span>
+                  <span className="font-bold text-lg text-indigo-600">{formatPrice(totalAmount)}</span>
                   <button onClick={() => copyToClipboard(totalAmount.toFixed(2), "Amount")} className="p-1 hover:bg-gray-200 rounded transition-colors">
-                    <Copy size={16} className="text-blue-600" />
+                    <Copy size={16} className="text-indigo-600" />
                   </button>
                 </div>
               </div>
@@ -490,7 +490,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
             ) : (
               <label className="block">
                 <input type="file" accept="image/png,image/jpeg,image/jpg" onChange={handleFileSelect} className="hidden" />
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 cursor-pointer transition-colors">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-indigo-500 cursor-pointer transition-colors">
                   <Upload className="w-12 h-12 text-gray-400 mx-auto mb-3" />
                   <p className="text-gray-700 font-medium mb-1">Upload Payment Receipt</p>
                   <p className="text-sm text-gray-500">PNG or JPEG, max 5MB</p>
@@ -501,7 +501,7 @@ export const BookingModal = ({ isOpen, onClose, room }: BookingModalProps): JSX.
             <p className="text-xs text-red-600">The uploaded image should be in .png or .jpeg format and not more than 5MB.</p>
 
             {/* Submit Button */}
-            <button onClick={handleSubmitPayment} disabled={loading || !receiptFile} className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2">
+            <button onClick={handleSubmitPayment} disabled={loading || !receiptFile} className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2">
               {loading ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /> : "Submit Payment"}
             </button>
           </div>

@@ -14,9 +14,9 @@ export const CounterCard = () => {
       end: 60,
       duration: 2,
       label: "Luxury Rooms",
-      color: "text-blue-600",
-      bgColor: "bg-blue-100",
-      borderColor: "border-blue-200",
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-100",
+      borderColor: "border-indigo-200",
     },
     {
       icon: Users,
@@ -52,12 +52,12 @@ export const CounterCard = () => {
   return (
     <div className="bg-white rounded-2xl p-6 h-full shadow-lg border border-gray-100 relative overflow-hidden">
       {/* Decoration */}
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-50 rounded-full opacity-50"></div>
+      <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-50 rounded-full opacity-50"></div>
       <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-50 rounded-full opacity-50"></div>
 
       {/* Header */}
       <div className="mb-6 relative z-10">
-        <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full mb-2">Our Achievements</span>
+        <span className="inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full mb-2">Our Achievements</span>
         <h3 className="text-gray-900 text-xl font-bold">Numbers That Speak</h3>
       </div>
 
@@ -77,7 +77,7 @@ export const CounterCard = () => {
                   0
                 </h3>
 
-                {!counter.noPlus && <span className="text-xl font-bold text-blue-500">+</span>}
+                {!counter.noPlus && <span className="text-xl font-bold text-indigo-500">+</span>}
               </div>
 
               <p className="text-gray-500 text-sm">{counter.label}</p>

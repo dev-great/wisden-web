@@ -52,7 +52,7 @@ const ForgotPassword = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <TawkWidget />
-      <div className="flex flex-col bg-blue-100 text-foreground overflow-x-hidden">
+      <div className="flex flex-col bg-indigo-100 text-foreground overflow-x-hidden">
         <main className="flex-grow flex items-center justify-center py-12 px-4">
           <div className="w-full max-w-md">
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -71,7 +71,7 @@ const ForgotPassword = () => {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address
                       </label>
-                      <input type="email" id="email" name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter your email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" />
+                      <input type="email" id="email" name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder="Enter your email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" />
                       {formik.touched.email && formik.errors.email && <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>}
                     </div>
 

@@ -88,42 +88,42 @@ export const Header = () => {
               <ul className="flex flex-col xl:flex-row xl:items-center xl:space-x-1 p-4 xl:p-0">
                 {/* Nav item Home */}
                 <li>
-                  <Link className="block py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium" to="/" onClick={() => setIsOpen(false)}>
+                  <Link className="block py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium" to="/" onClick={() => setIsOpen(false)}>
                     Home
                   </Link>
                 </li>
 
                 {/* Nav item About Us */}
                 <li>
-                  <Link className="block py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium" to="/about-us" onClick={() => setIsOpen(false)}>
+                  <Link className="block py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium" to="/about-us" onClick={() => setIsOpen(false)}>
                     About Us
                   </Link>
                 </li>
 
                 {/* Nav item Rooms */}
                 <li>
-                  <Link className="block py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium" to="/rooms" onClick={() => setIsOpen(false)}>
+                  <Link className="block py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium" to="/rooms" onClick={() => setIsOpen(false)}>
                     Rooms
                   </Link>
                 </li>
 
                 {/* Nav item Contact Us */}
                 <li>
-                  <Link className="block py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium" to="/contact" onClick={() => setIsOpen(false)}>
+                  <Link className="block py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium" to="/contact" onClick={() => setIsOpen(false)}>
                     Contact Us
                   </Link>
                 </li>
 
                 {/* Nav item Support Dropdown */}
                 <li className="relative" ref={supportRef}>
-                  <button className="flex items-center gap-1 py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium w-full xl:w-auto" onClick={() => setSupportOpen((v) => !v)}>
+                  <button className="flex items-center gap-1 py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium w-full xl:w-auto" onClick={() => setSupportOpen((v) => !v)}>
                     Support
                     <ChevronDown size={16} className={`transition-transform ${supportOpen ? "rotate-180" : ""}`} />
                   </button>
                   <ul className={`${supportOpen ? "block" : "hidden"} xl:absolute xl:top-full xl:left-0 xl:mt-1 xl:w-48 bg-white xl:shadow-lg xl:rounded-lg xl:border border-gray-200 py-2 xl:py-1`}>
                     <li>
                       <Link
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition-colors"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-500 transition-colors"
                         to="/privacy-policy"
                         onClick={() => {
                           setSupportOpen(false);
@@ -135,7 +135,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <Link
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition-colors"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-500 transition-colors"
                         to="/terms-of-service"
                         onClick={() => {
                           setSupportOpen(false);
@@ -147,7 +147,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <Link
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition-colors"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-500 transition-colors"
                         to="/faq"
                         onClick={() => {
                           setSupportOpen(false);
@@ -162,14 +162,14 @@ export const Header = () => {
 
                 {/* Nav item Downloads Dropdown */}
                 <li className="relative" ref={downloadsRef}>
-                  <button className="flex items-center gap-1 py-2 px-3 text-gray-700 hover:text-blue-500 transition-colors font-medium w-full xl:w-auto" onClick={() => setDownloadsOpen((v) => !v)}>
+                  <button className="flex items-center gap-1 py-2 px-3 text-gray-700 hover:text-indigo-500 transition-colors font-medium w-full xl:w-auto" onClick={() => setDownloadsOpen((v) => !v)}>
                     Downloads
                     <ChevronDown size={16} className={`transition-transform ${downloadsOpen ? "rotate-180" : ""}`} />
                   </button>
                   <ul className={`${downloadsOpen ? "block" : "hidden"} xl:absolute xl:top-full xl:left-0 xl:mt-1 xl:w-48 bg-white xl:shadow-lg xl:rounded-lg xl:border border-gray-200 py-2 xl:py-1`}>
                     <li>
                       <Link
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition-colors"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-500 transition-colors"
                         to="#"
                         onClick={() => {
                           setDownloadsOpen(false);
@@ -181,7 +181,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <Link
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-500 transition-colors"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-500 transition-colors"
                         to="#"
                         onClick={() => {
                           setDownloadsOpen(false);
@@ -201,12 +201,12 @@ export const Header = () => {
                       Contact Us
                     </Link>
                     {isAuthenticated ? (
-                      <Link to="/booking" className="flex items-center justify-center gap-2 py-2 px-4 bg-blue-400 text-gray-900 rounded-lg hover:bg-blue-500 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                      <Link to="/booking" className="flex items-center justify-center gap-2 py-2 px-4 bg-indigo-400 text-gray-900 rounded-lg hover:bg-indigo-500 font-medium transition-colors" onClick={() => setIsOpen(false)}>
                         <User size={18} />
                         {getUserDisplay()}
                       </Link>
                     ) : (
-                      <Link to="/login" className="block py-2 px-4 text-center bg-blue-400 text-white rounded-lg hover:bg-blue-500 font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                      <Link to="/login" className="block py-2 px-4 text-center bg-indigo-400 text-white rounded-lg hover:bg-indigo-500 font-medium transition-colors" onClick={() => setIsOpen(false)}>
                         Login
                       </Link>
                     )}
@@ -225,8 +225,8 @@ export const Header = () => {
                   </button>
                   <div className={`${searchOpen ? "block" : "hidden"} absolute right-0 mt-2 w-72 bg-white shadow-lg rounded-lg border border-gray-200 p-3 z-50`}>
                     <form className="flex">
-                      <input className="flex-1 px-3 py-2 border border-blue-500 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="search" placeholder="Search..." aria-label="Search" />
-                      <button className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-r-md transition-colors" type="submit">
+                      <input className="flex-1 px-3 py-2 border border-indigo-500 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500" type="search" placeholder="Search..." aria-label="Search" />
+                      <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-r-md transition-colors" type="submit">
                         Search
                       </button>
                     </form>
@@ -244,13 +244,13 @@ export const Header = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-gray-700 text-sm">Mode:</span>
                         <div className="flex items-center space-x-1">
-                          <button type="button" onClick={() => handleThemeChange("light")} className={`p-2 rounded-md transition-colors ${currentTheme === "light" ? "bg-blue-100 text-blue-600" : "hover:bg-gray-100 text-gray-600"}`} title="Light">
+                          <button type="button" onClick={() => handleThemeChange("light")} className={`p-2 rounded-md transition-colors ${currentTheme === "light" ? "bg-indigo-100 text-indigo-600" : "hover:bg-gray-100 text-gray-600"}`} title="Light">
                             <Sun size={16} />
                           </button>
-                          <button type="button" onClick={() => handleThemeChange("dark")} className={`p-2 rounded-md transition-colors ${currentTheme === "dark" ? "bg-blue-100 text-blue-600" : "hover:bg-gray-100 text-gray-600"}`} title="Dark">
+                          <button type="button" onClick={() => handleThemeChange("dark")} className={`p-2 rounded-md transition-colors ${currentTheme === "dark" ? "bg-indigo-100 text-indigo-600" : "hover:bg-gray-100 text-gray-600"}`} title="Dark">
                             <Moon size={16} />
                           </button>
-                          <button type="button" onClick={() => handleThemeChange("auto")} className={`p-2 rounded-md transition-colors ${currentTheme === "auto" ? "bg-blue-100 text-blue-600" : "hover:bg-gray-100 text-gray-600"}`} title="Auto">
+                          <button type="button" onClick={() => handleThemeChange("auto")} className={`p-2 rounded-md transition-colors ${currentTheme === "auto" ? "bg-indigo-100 text-indigo-600" : "hover:bg-gray-100 text-gray-600"}`} title="Auto">
                             <Monitor size={16} />
                           </button>
                         </div>
@@ -267,12 +267,12 @@ export const Header = () => {
                 </Link>
 
                 {isAuthenticated ? (
-                  <Link to="/booking" className="flex items-center gap-2 px-5 py-2 bg-blue-400 text-gray-900 rounded-lg hover:bg-blue-500 font-medium transition-colors">
+                  <Link to="/booking" className="flex items-center gap-2 px-5 py-2 bg-indigo-400 text-gray-900 rounded-lg hover:bg-indigo-500 font-medium transition-colors">
                     <User size={18} />
                     {getUserDisplay()}
                   </Link>
                 ) : (
-                  <Link to="/login" className="px-5 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 font-medium transition-colors">
+                  <Link to="/login" className="px-5 py-2 bg-indigo-400 text-white rounded-lg hover:bg-indigo-500 font-medium transition-colors">
                     Login
                   </Link>
                 )}

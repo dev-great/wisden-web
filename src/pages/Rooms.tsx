@@ -108,7 +108,7 @@ const RoomCard = ({ room, onViewDetails }: RoomCardProps) => {
         {/* Availability Badge */}
         <div className="absolute top-2 left-2 flex gap-1.5">
           <span className={`px-2 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${room.is_available ? "bg-green-500/90 text-white" : "bg-red-500/90 text-white"}`}>{room.is_available ? "Available" : "Booked"}</span>
-          {room.has_balcony && <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-500/90 text-white backdrop-blur-sm">Balcony</span>}
+          {room.has_balcony && <span className="px-2 py-1 rounded-full text-xs font-medium bg-indigo-500/90 text-white backdrop-blur-sm">Balcony</span>}
         </div>
       </div>
 
@@ -123,7 +123,7 @@ const RoomCard = ({ room, onViewDetails }: RoomCardProps) => {
             </p>
           </div>
           <div className="text-right">
-            <p className="text-lg font-bold text-blue-600">{formatPrice(room.room_type.price_per_night)}</p>
+            <p className="text-lg font-bold text-indigo-600">{formatPrice(room.room_type.price_per_night)}</p>
             <p className="text-[12px] text-gray-500">per night</p>
           </div>
         </div>
@@ -152,7 +152,7 @@ const RoomCard = ({ room, onViewDetails }: RoomCardProps) => {
         {/* Book Button */}
         <button
           disabled={!room.is_available}
-          className={`w-full py-3 rounded-lg text-sm font-medium transition-colors ${room.is_available ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
+          className={`w-full py-3 rounded-lg text-sm font-medium transition-colors ${room.is_available ? "bg-indigo-600 hover:bg-indigo-700 text-white" : "bg-gray-100 text-gray-400 cursor-not-allowed"}`}
           onClick={(e) => {
             e.stopPropagation();
             onViewDetails(room.id);
@@ -271,7 +271,7 @@ export const Rooms = () => {
             {/* Search */}
             <div className="lg:col-span-2">
               <div className="relative">
-                <input type="text" placeholder="Search rooms..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                <input type="text" placeholder="Search rooms..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
                 <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -280,7 +280,7 @@ export const Rooms = () => {
 
             {/* Filter */}
             <div>
-              <select value={filter} onChange={(e) => setFilter(e.target.value as FilterType)} className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
+              <select value={filter} onChange={(e) => setFilter(e.target.value as FilterType)} className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white">
                 <option value="all">All Rooms</option>
                 <option value="available">Available Only</option>
                 <option value="balcony">With Balcony</option>
@@ -289,7 +289,7 @@ export const Rooms = () => {
 
             {/* Sort */}
             <div>
-              <select value={sort} onChange={(e) => setSort(e.target.value as SortType)} className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
+              <select value={sort} onChange={(e) => setSort(e.target.value as SortType)} className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white">
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="capacity">Capacity</option>
@@ -315,7 +315,7 @@ export const Rooms = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Unable to load rooms</h3>
               <p className="text-gray-600 mb-4">{error}</p>
-              <button onClick={() => window.location.reload()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+              <button onClick={() => window.location.reload()} className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                 Try Again
               </button>
             </div>
@@ -333,7 +333,7 @@ export const Rooms = () => {
                   setFilter("all");
                   setSearchQuery("");
                 }}
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
               >
                 Clear Filters
               </button>

@@ -175,7 +175,7 @@ export const RoomDetails = (): JSX.Element => {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-3">Room Not Found</h2>
             <p className="text-gray-600 mb-8 max-w-md mx-auto">{error || "The room you're looking for doesn't exist or has been removed."}</p>
-            <button onClick={() => navigate("/rooms")} className="px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium">
+            <button onClick={() => navigate("/rooms")} className="px-8 py-3 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors font-medium">
               Browse All Rooms
             </button>
           </div>
@@ -202,7 +202,7 @@ export const RoomDetails = (): JSX.Element => {
             <h1 className="text-2xl md:text-3xl font-semibold text-gray-900">{room.room_type.name}</h1>
             <div className="flex flex-wrap items-center gap-2 mt-2 text-sm">
               <div className="flex items-center gap-1">
-                <Star className="w-4 h-4 fill-blue-500 text-blue-500" />
+                <Star className="w-4 h-4 fill-indigo-500 text-indigo-500" />
                 <span className="font-medium">4.9</span>
                 <span className="text-gray-500">(128 reviews)</span>
               </div>
@@ -284,7 +284,7 @@ export const RoomDetails = (): JSX.Element => {
                   <span>1 bathroom</span>
                 </div>
               </div>
-              <div className="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl">W</div>
+              <div className="w-14 h-14 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-xl">W</div>
             </div>
 
             {/* Highlights */}
@@ -382,7 +382,7 @@ export const RoomDetails = (): JSX.Element => {
               </div>
 
               {/* Book Button */}
-              <button disabled={!room.is_available} onClick={handleBookRoom} className={`w-full py-3 rounded-lg font-semibold text-base transition-all ${room.is_available ? "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white" : "bg-gray-200 text-gray-500 cursor-not-allowed"}`}>
+              <button disabled={!room.is_available} onClick={handleBookRoom} className={`w-full py-3 rounded-lg font-semibold text-base transition-all ${room.is_available ? "bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white" : "bg-gray-200 text-gray-500 cursor-not-allowed"}`}>
                 {room.is_available ? "Reserve" : "Currently Unavailable"}
               </button>
 
@@ -444,7 +444,7 @@ export const RoomDetails = (): JSX.Element => {
             {/* Thumbnail Strip */}
             <div className="flex justify-center gap-2 mt-8 overflow-x-auto pb-4">
               {room.images.map((image, idx) => (
-                <button key={image.id} onClick={() => setCurrentImageIndex(idx)} className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden ${currentImageIndex === idx ? "ring-2 ring-blue-500" : "opacity-60 hover:opacity-100"} transition-all`}>
+                <button key={image.id} onClick={() => setCurrentImageIndex(idx)} className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden ${currentImageIndex === idx ? "ring-2 ring-indigo-500" : "opacity-60 hover:opacity-100"} transition-all`}>
                   <img src={image.image} alt={image.caption} className="w-full h-full object-cover" />
                 </button>
               ))}
@@ -463,7 +463,7 @@ export const RoomDetails = (): JSX.Element => {
             <span className="font-semibold text-gray-900">{formatPrice(room.room_type.price_per_night)}</span>
             <span className="text-gray-500"> night</span>
           </div>
-          <button disabled={!room.is_available} onClick={handleBookRoom} className={`px-9 py-3 rounded-lg font-semibold transition-all ${room.is_available ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white" : "bg-gray-200 text-gray-500 cursor-not-allowed"}`}>
+          <button disabled={!room.is_available} onClick={handleBookRoom} className={`px-9 py-3 rounded-lg font-semibold transition-all ${room.is_available ? "bg-gradient-to-r from-indigo-500 to-indigo-600 text-white" : "bg-gray-200 text-gray-500 cursor-not-allowed"}`}>
             {room.is_available ? "Reserve" : "Unavailable"}
           </button>
         </div>
