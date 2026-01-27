@@ -116,11 +116,10 @@ const RoomCard = ({ room, onViewDetails }: RoomCardProps) => {
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
           <div>
-            <h3 className="text-base font-semibold text-gray-900">{room.room_type.name}</h3>
-            <p className="text-[12px] text-gray-500">
-              Room {room.room_number}
-              {room.floor && ` • Floor ${room.floor}`}
-            </p>
+            <h3 className="text-base font-semibold text-gray-900">
+              {room.room_type.name} - <span className="font-bold">({room.room_number})</span>
+            </h3>
+            {room.floor && <p className="text-[12px] text-gray-500">Floor {room.floor}</p>}
           </div>
           <div className="text-right">
             <p className="text-lg font-bold text-indigo-600">{formatPrice(room.room_type.price_per_night)}</p>
